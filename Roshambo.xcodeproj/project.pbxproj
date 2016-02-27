@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CF7E06191C80CC3900F1E29B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E06181C80CC3900F1E29B /* AppDelegate.swift */; };
-		CF7E061B1C80CC3900F1E29B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E061A1C80CC3900F1E29B /* ViewController.swift */; };
+		CF7E061B1C80CC3900F1E29B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E061A1C80CC3900F1E29B /* PlayViewController.swift */; };
 		CF7E061E1C80CC3900F1E29B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7E061C1C80CC3900F1E29B /* Main.storyboard */; };
 		CF7E06201C80CC3900F1E29B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7E061F1C80CC3900F1E29B /* Assets.xcassets */; };
 		CF7E06231C80CC3900F1E29B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7E06211C80CC3900F1E29B /* LaunchScreen.storyboard */; };
+		CFE4EB531C814D18006A3989 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4EB521C814D18006A3989 /* ResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF7E06151C80CC3900F1E29B /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7E06181C80CC3900F1E29B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF7E061A1C80CC3900F1E29B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF7E061A1C80CC3900F1E29B /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		CF7E061D1C80CC3900F1E29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF7E061F1C80CC3900F1E29B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF7E06221C80CC3900F1E29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7E06241C80CC3900F1E29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE4EB521C814D18006A3989 /* ResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				CF7E06181C80CC3900F1E29B /* AppDelegate.swift */,
-				CF7E061A1C80CC3900F1E29B /* ViewController.swift */,
+				CF7E061A1C80CC3900F1E29B /* PlayViewController.swift */,
 				CF7E061C1C80CC3900F1E29B /* Main.storyboard */,
 				CF7E061F1C80CC3900F1E29B /* Assets.xcassets */,
 				CF7E06211C80CC3900F1E29B /* LaunchScreen.storyboard */,
 				CF7E06241C80CC3900F1E29B /* Info.plist */,
+				CFE4EB521C814D18006A3989 /* ResponseViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF7E061B1C80CC3900F1E29B /* ViewController.swift in Sources */,
+				CF7E061B1C80CC3900F1E29B /* PlayViewController.swift in Sources */,
+				CFE4EB531C814D18006A3989 /* ResponseViewController.swift in Sources */,
 				CF7E06191C80CC3900F1E29B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				CF7E06291C80CC3900F1E29B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
