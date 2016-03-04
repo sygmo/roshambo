@@ -10,16 +10,20 @@ import UIKit
 
 class PlayViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    /**
+     * Randomly generates opponent's play
+     */
+    func randomPlay() -> Int {
+        // Generate a random Int32 using arc4Random
+        let randomValue = arc4random_uniform(3)
+        
+        // Return a more convenient Int, initialized with the random value
+        return Int(randomValue)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func startPlay(sender: UIButton) {
+        performSegueWithIdentifier("showHand", sender: self)
     }
-
 
 }
 

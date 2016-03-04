@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Play View Controller-->
@@ -14,19 +15,46 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-0V-DLJ">
-                                <rect key="frame" x="277" y="454" width="46" height="30"/>
-                                <state key="normal" title="PlayButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlr-7I-ke3">
+                                <rect key="frame" x="125" y="438" width="70" height="30"/>
+                                <state key="normal" title="Let's Play!"/>
+                                <connections>
+                                    <action selector="startPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4Q-7O-lcJ"/>
+                                    <segue destination="eqa-Aa-7SR" kind="modal" identifier="showHand" id="2Ex-JP-fg2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-us-V9q">
+                                <rect key="frame" x="141" y="120" width="37" height="32"/>
+                                <state key="normal" image="Paper"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIQ-K7-aeG">
+                                <rect key="frame" x="66" y="202" width="37" height="32"/>
+                                <state key="normal" image="Rock"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k78-TA-WQK">
+                                <rect key="frame" x="217" y="202" width="37" height="32"/>
+                                <state key="normal" image="Scissors"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RHL-us-V9q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CEg-4u-nES"/>
+                            <constraint firstItem="WIQ-K7-aeG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="I37-z9-5gX"/>
+                            <constraint firstItem="RHL-us-V9q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="IbH-cR-kl4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k78-TA-WQK" secondAttribute="trailing" constant="50" id="KgF-P1-p22"/>
+                            <constraint firstItem="Dlr-7I-ke3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rb4-X6-QZG"/>
+                            <constraint firstItem="k78-TA-WQK" firstAttribute="top" secondItem="RHL-us-V9q" secondAttribute="bottom" constant="50" id="TfQ-Ee-1ht"/>
+                            <constraint firstItem="WIQ-K7-aeG" firstAttribute="top" secondItem="RHL-us-V9q" secondAttribute="bottom" constant="50" id="tTj-EZ-cFG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dlr-7I-ke3" secondAttribute="bottom" constant="100" id="v3j-rv-YBr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="234" y="368"/>
         </scene>
         <!--Response View Controller-->
         <scene sceneID="JAt-sF-svW">
@@ -37,14 +65,32 @@
                         <viewControllerLayoutGuide type="bottom" id="HeC-Zo-alZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Ho-nZ-PhJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-5t-L4I">
+                                <rect key="frame" x="125" y="438" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="eqa-Aa-7SR" eventType="touchUpInside" id="Xe2-jY-IaF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fj1-5t-L4I" firstAttribute="centerX" secondItem="0Ho-nZ-PhJ" secondAttribute="centerX" id="CcK-kp-yRV"/>
+                            <constraint firstItem="HeC-Zo-alZ" firstAttribute="top" secondItem="fj1-5t-L4I" secondAttribute="bottom" constant="100" id="S7M-ef-hI5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Euu-ak-Ccb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="389"/>
+            <point key="canvasLocation" x="657" y="368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Paper" width="37" height="32"/>
+        <image name="Rock" width="37" height="32"/>
+        <image name="Scissors" width="37" height="32"/>
+    </resources>
 </document>
